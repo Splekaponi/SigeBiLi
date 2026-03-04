@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -321,4 +322,329 @@ carouselTrack.addEventListener("touchend", e=>{
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SigeBili</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <i class="fas fa-times" onclick="toggleCart()"></i>
+  </div>
+
+  <div class="cart-items" id="cart-items"></div>
+
+  <div class="cart-footer">
+    <h4>Total: ₱<span id="cart-total">0</span></h4>
+    <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+<header>
+  <div class="logo">Sige<span>BiLi</span></div>
+
+  <nav>
+    <ul id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="icons" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Experience Next-Level Tech</h1>
+    <p>Premium gadgets & accessories crafted for modern life.</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h2 class="section-title">Featured Products</h2>
+  <div class="product-grid">
+
+ 
+    <div class="card reveal" data-images='["wirelessheadphones.webp","wirelessheadphones2.webp","wirelessheadphones3.webp","wirelessheadphones4.webp","wirelessheadphones5.webp","wirelessheadphones6.webp"]'>
+      <span class="badge sale">SALE</span>
+      <img src="wirelessheadphones.webp">
+      <h3>Wireless Headphones</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+      <p class="price">₱9,280</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+   
+    <div class="card reveal" data-images='["smartwatch.webp","smartwatch2.webp","smartwatch3.webp","smartwatch4.webp"]'>
+      <span class="badge new">NEW</span>
+      <img src="smartwatch.webp">
+      <h3>Smart Watch Pro</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+      <p class="price">₱34,966</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+    
+    <div class="card reveal" data-images='["gamingmouse.webp","gamingmouse2.webp","gamingmouse3.webp"]'>
+      <img src="gamingmouse.webp">
+      <h3>Gaming Mouse RGB</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="price">₱590</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+   
+    <div class="card reveal" data-images='["mechanical.webp","mechanical2.webp","mechanical3.webp","mechanical4.webp"]'>
+      <span class="badge sale">SALE</span>
+      <img src="mechanical.webp">
+      <h3>Mechanical Keyboard</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></div>
+      <p class="price">₱4,320</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+  
+    <div class="card reveal" data-images='["speaker.webp","speaker2.webp","speaker3.webp","speaker4.webp"]'>
+      <img src="speaker.webp">
+      <h3>Bluetooth Speaker</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+      <p class="price">₱4,000</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+   
+    <div class="card reveal" data-images='["vacuum.webp","vacuum2.webp","vacuum3.webp","vacuum4.webp","vacuum5.webp"]'>
+      <span class="badge new">NEW</span>
+      <img src="vacuum.webp">
+      <h3>Robot Vacuum</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+      <p class="price">₱5,780</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+  
+    <div class="card reveal" data-images='["VR.webp","VR2.webp","VR3.webp"]'>
+      <img src="VR.webp">
+      <h3>VR Headset</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="price">₱10,800</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+   
+    <div class="card reveal" data-images='["camera.webp","camera2.webp","camera3.webp"]'>
+      <img src="camera.webp">
+      <h3>4K Action Camera</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i></div>
+      <p class="price">₱8,700</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+   
+    <div class="card reveal" data-images='["webcam.webp","webcam2.webp","webcam3.webp","webcam4.webp"]'>
+      <img src="webcam.webp">
+      <h3>Webcam</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+      <p class="price">₱2,700</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+   
+    <div class="card reveal" data-images='["glasses.webp","glasses2.webp","glasses3.webp","glasses4.webp"]'>
+      <img src="glasses.webp">
+      <h3>Smart Glasses</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+      <p class="price">₱25,187</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+    
+    <div class="card reveal" data-images='["earbuds.webp","earbuds2.webp","earbuds3.webp","earbuds4.webp"]'>
+      <img src="earbuds.webp">
+      <h3>Noise Cancelling Earbuds</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="price">₱4,567</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+  
+    <div class="card reveal" data-images='["projector.webp","projector2.webp","projector3.webp"]'>
+      <img src="projector.webp">
+      <h3>Projector</h3>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+      <p class="price">₱7,800</p>
+      <button class="cart-btn" onclick="addToCart(event)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <h4>Contact Us</h4>
+      <p>Email: support@SigeBiLi.com</p>
+      <p>Phone: +63 154 1597 596</p>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </div>
+  </div>
+
+  <p class="copyright">© 2026 SigeBiLi. All rights reserved.</p>
+</footer>
+
+
+<div id="product-modal" class="product-modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <div class="modal-carousel">
+    <div class="carousel-track" id="carousel-track"></div>
+    <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<script>
+
+function toggleMenu(){ document.getElementById("nav-links").classList.toggle("active"); }
+
+
+let cart = [];
+
+function toggleCart(){
+  document.getElementById("cart-sidebar").classList.toggle("active");
+  document.getElementById("cart-overlay").classList.toggle("active");
+}
+
+function addToCart(e){
+  const productCard = e.target.closest(".card");
+  const name = productCard.querySelector("h3").innerText;
+  const priceText = productCard.querySelector(".price").innerText;
+  const price = parseFloat(priceText.replace(/[^0-9.]/g, ""));
+  const existingProduct = cart.find(item => item.name === name);
+  if(existingProduct){ existingProduct.quantity++; } 
+  else { cart.push({ name, price, quantity: 1 }); }
+  updateCart();
+}
+
+function updateCart(){
+  const cartItems = document.getElementById("cart-items");
+  cartItems.innerHTML = "";
+  let total = 0, count = 0;
+  cart.forEach((item, index)=>{
+    total += item.price * item.quantity;
+    count += item.quantity;
+    cartItems.innerHTML += `
+      <div class="cart-item">
+        <div>
+          <h5>${item.name}</h5>
+          <p>₱${item.price.toLocaleString()}</p>
+        </div>
+        <div class="quantity-controls">
+          <button onclick="decreaseQty(${index})">-</button>
+          <span>${item.quantity}</span>
+          <button onclick="increaseQty(${index})">+</button>
+        </div>
+        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+      </div>`;
+  });
+  document.getElementById("cart-count").innerText = count;
+  document.getElementById("cart-total").innerText = total.toLocaleString();
+}
+
+function increaseQty(index){ cart[index].quantity++; updateCart(); }
+function decreaseQty(index){ if(cart[index].quantity>1){ cart[index].quantity--; } else { cart.splice(index,1); } updateCart(); }
+function removeItem(index){ cart.splice(index,1); updateCart(); }
+function clearCart(){ cart=[]; updateCart(); }
+
+
+function revealElements(){
+  document.querySelectorAll(".reveal").forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight-100){
+      el.classList.add("active");
+    }
+  });
+}
+window.addEventListener("scroll", revealElements);
+window.addEventListener("load", revealElements);
+
+
+const modal = document.getElementById("product-modal");
+const carouselTrack = document.getElementById("carousel-track");
+let currentSlide = 0, slides = [];
+
+document.querySelectorAll(".card img").forEach(img=>{
+  img.addEventListener("click", e=>{
+    const card = e.target.closest(".card");
+    slides = JSON.parse(card.dataset.images || '[]');
+    if(slides.length===0) slides = [img.src];
+    currentSlide=0;
+    renderCarousel();
+    modal.style.display="flex";
+  });
+});
+
+function closeModal(){ modal.style.display="none"; }
+
+function renderCarousel(){
+  carouselTrack.innerHTML="";
+  slides.forEach(src=>{
+    const img=document.createElement("img");
+    img.src=src;
+    carouselTrack.appendChild(img);
+  });
+  updateSlide();
+}
+
+function updateSlide(){ carouselTrack.style.transform=`translateX(-${currentSlide*100}%)`; }
+function nextSlide(){ currentSlide=(currentSlide+1)%slides.length; updateSlide(); }
+function prevSlide(){ currentSlide=(currentSlide-1+slides.length)%slides.length; updateSlide(); }
+
+
+let startX=0;
+carouselTrack.addEventListener("touchstart", e=>{ startX=e.touches[0].clientX; });
+carouselTrack.addEventListener("touchend", e=>{
+  const endX=e.changedTouches[0].clientX;
+  if(endX-startX>50) prevSlide();
+  else if(startX-endX>50) nextSlide();
+});
+</script>
+
+</body>
+>>>>>>> f6d408b9028b31a2fd2f6c2332d45f09450fe956
 </html>
